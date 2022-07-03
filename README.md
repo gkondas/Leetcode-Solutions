@@ -1,4 +1,3 @@
 # Leetcode-Solutions
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
-
-This extention is great.
+This extention is a great way to store leetcode progress for studying!
+ 

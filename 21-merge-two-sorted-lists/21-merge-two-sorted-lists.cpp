@@ -14,37 +14,13 @@ public:
         if(!list1) return list2;
         if(!list2) return list1;
         
-        vector<int> all;
-        ListNode* now = list1;
-        while(now){
-            all.push_back(now->val);
-            now = now->next;
+        if(list1->val < list2->val){
+            list1->next = mergeTwoLists(list1->next,list2);
+            return list1;
         }
-        now = list2;
-        while(now){
-            all.push_back(now->val);
-            now = now->next;
+        else{
+            list2->next = mergeTwoLists(list1,list2->next);
+            return list2;
         }
-        
-        std::sort(all.begin(),all.end());
-        
-        ListNode* out;
-        ListNode* ptr;
-        bool first = true;
-        
-        for(auto it:all){
-            ListNode* current = new ListNode();
-            if(first){
-                out = current;
-                ptr = out;
-                first = false;
-            }
-            current->val = it;
-            ptr->next = current;
-            ptr = current;
-        }
-        
-        return out;
-        
     }
 };

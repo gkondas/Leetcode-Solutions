@@ -23,17 +23,13 @@ public:
             if(!head->next){
                 lastNew->next = nullptr;
             }
-            if(head->val == lastSeen){
-                head = head->next;
-            }
-            else{
+            if(head->val != lastSeen){
                 lastNew->next = head;
                 lastNew = head;
                 lastSeen = head->val;
-                head = head->next;
-                
-                
             }
+            
+            head= head->next;
         }
         
         

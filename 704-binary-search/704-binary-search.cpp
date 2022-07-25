@@ -5,7 +5,7 @@ public:
         int l =0;
         int r = (int) nums.size() -1;
         
-        while(l<r-1){
+        while(l<=r){
             int mid = floor((l+r) / 2);
             
             if(nums[mid] == target){
@@ -19,8 +19,6 @@ public:
             }
         }
         
-        if(nums[l] == target) return l;
-        if(nums[r] == target) return r;
         
         
         return -1;

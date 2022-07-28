@@ -21,12 +21,7 @@ public:
             head = head->next;
         }
         
-        if(i%2 == 0){
-            get = (i/2);
-        }
-        else{
-            get = ceil(i/2);
-        }
+        get = ceil(i/2);
         
         
         ListNode* ptr = begin;
